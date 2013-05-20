@@ -1,0 +1,368 @@
+body{
+	background-image: url(images/background.jpg);
+}
+
+
+a:visited {
+	color:#E68AB8;
+}  /* visited link */
+a:hover {
+	color:#6C91FF;
+}  /* mouse over link */
+a:active {
+	color:#75FFA3;
+}  /* selected link */ 
+
+#registers{
+	height: 300px;
+	width: 120px;
+	text-align: left;
+}
+#login_form{
+	height: 300px;
+	width: 120px;
+	text-align: left;
+}
+
+/* home */
+#home{
+
+	background :#FFDEDE;
+	width : 1000px;
+	margin-left: 210px;
+	margin-right: auto;
+	border: 1px solid black;
+	
+}
+
+
+
+#banking{
+	height: 500px;
+	width : 1000px;
+}
+
+
+#depositor{
+
+	background : #FFDEDE;
+	width : 1000px;
+	margin-left: 210px;
+	margin-right: auto;
+	border: 1px solid black;
+	font-size: 13px
+	
+}
+#records{
+
+	background : #FFDEDE;
+	width : 1000px;
+	margin-left: 210px;
+	margin-right: auto;
+	border: 1px solid black;
+	font-size: 13px;
+}
+#transactions{
+
+	background : #FFDEDE;
+	width : 1000px;
+	margin-left: 210px;
+	margin-right: auto;
+	border: 1px solid black;
+	font-size: 13px;
+	
+}
+/*#mission1{
+
+	background : #9191B5;
+	width : 1000px;
+	margin-left: 180px;
+	margin-right: auto;
+	border: 1px solid black;
+	font-size: 13px;
+	
+}
+#vision1{
+
+	background : #9191B5;
+	width : 1000px;
+	margin-left: 180px;
+	margin-right: auto;
+	border: 1px solid black;
+	font-size: 13px;
+	
+}
+}
+#bank_history1{
+
+	background : #9191B5;
+	width : 1000px;
+	margin-left: 180px;
+	margin-right: auto;
+	border: 1px solid black;
+	font-size: 13px;
+}
+#index{
+
+	background : #9191B5;
+	width : 1000px;
+	margin-left: 160px;
+	margin-right: auto;
+	
+}*/
+h1{
+	text-align: center;
+	font-family: Arial;
+	clear: both;
+	outline: medium none;
+}
+h2{
+	text-align: center;
+	font-family: Arial;
+	clear: both;
+	outline: medium none;
+}
+
+#anchor{  
+	height: 200px;
+	width: 50px;
+	padding: 20px;
+	text-align: center;
+	float: left;
+	
+}
+
+p{
+	color: #787878;
+	font-family: Arial;
+	font-size: 12px;	
+	float:right;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#paragraph{
+	color: #787878;
+	font-family: Arial;
+	font-size: 12px;	
+	float:right;
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+#icons{
+	width:40px;
+	height:35px;
+}
+.edit{
+	width:35px;
+	height:20px;
+}
+.delete{
+	width:35px;
+	height:20px;
+}
+#search1{
+	width:40px;
+	height:25px;
+	margin-right:40px ;
+	float: right;
+}
+#search{
+	
+	margin-right:20px ;
+	float: right;
+}
+#anchor1{
+	text-align:left;
+	text-decoration:none;
+	padding:5px;
+	margin: 10px auto;
+	width:400px;
+	color: #787878;
+	font-family: Arial;
+	font-size: 12px;
+		
+}
+
+#login_form{
+
+	text-size:40px;
+	float:left;
+
+}
+#bop{
+	width: 800px;
+	height: 600px;
+	float: right;
+	margin: 70px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:-1;
+}
+#addDialog {
+	display: none;
+}
+#add_button_depositor{
+	float:left;
+	margin-left: 70px;
+	position: relative;
+	
+}
+#add_button_records{
+	float:left;
+	margin:left: 10px ;
+	margin-left: 70px;
+}
+#bank{
+	height: 100px;
+	width: 200px;
+	float : right;
+}
+
+#accountant_login{
+	float : right;
+	text-decoration: none;
+	color: #787878;
+
+}
+#logIn{
+	margin-left: 160px;
+	margin-right: auto;
+	background : #FFDEDE;
+	width : 1000px;
+	padding: 20px;
+	margin: 10px , 20px , 10px , 20px;
+	
+}
+/*#index{
+
+	background : #9191B5;
+	width : 1000px;
+	margin-left: 180px;
+	margin-right: auto;
+	
+}*/
+#depositor1{
+	text-decoration:none;
+	
+}
+#records1{
+	text-decoration:none;
+	
+}
+#home1{
+	text-decoration:none;
+	
+}
+#transactions1{
+	text-decoration:none;
+	
+}
+#p_mission{
+	font-size:12px;
+
+}
+
+/*#bankhistory{
+	font-size:12px;
+	background : #9191B5;
+	width : 1000px;
+	margin-left: 180px;
+	margin-right: auto;
+	border: 1px solid black;
+	
+}*/
+#tabs{
+	font-size:12px;
+	background : #FFDEDE;
+	width : 1000px;
+	margin-left: 180px;
+	margin-right: auto;
+	border: 1px solid black;
+	margin-top: 50px;
+	
+
+}
+
+#men{
+	margin-top: 15px;
+	
+}
+
+.menu{
+	
+	margin-left: 160px;
+	margin-right: auto;
+}
+#myname{
+	color: #787878;
+	font-family: Arial;
+	font-size: 12px;	
+	margin-left: 570px;
+	margin-right: auto;
+	padding: 0;
+	clear: both;
+}
+nav{
+	height: 40px;
+	padding: 1em;
+	width: 1030px;
+	margin-left: 180px;
+	position: relative;
+	top: 20px;
+}
+#main{
+	background: #4C4343;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+#list{
+	background: #4C4343;
+}
+
+#p_vission{
+	font-size:12px;
+	background : #ccc;
+	width : 1000px;
+	margin-left: 160px;
+	margin-right: auto;	
+}
+
+#banner{
+	
+	margin-left: 8px;
+	margin-right: auto;	
+}
+
+#images{
+	width: 300px;
+	height: 150px;
+}
+
+#home_icon{
+	width: 90px;
+	height: 65px;
+	float:left;
+
+}
+table{
+	border-collapse: collapse;
+	margin: 10px auto;
+}
+#logout{
+	color: #787878;
+	font-family: Arial;
+	font-size: 16px;
+	text-decoration:none;
+	text-align: right;
+}
+.myDialog{
+	display: none;
+}
+
+
+
