@@ -1,4 +1,3 @@
-
 $(function(){
 
 	$("#date_of_deposit").datepicker();
@@ -190,16 +189,36 @@ $("#add_button_records").click(function(){
 		}
 	});
 });				
-	$("#search").keyup(function(){ 
-		 var depositor_id = $("#search").val();
+	$("#searchtransac").keyup(function(){ 
+	
+		 var depositor_id = $("#searchtransac").val();
 		 var obj = {'depositor_id':depositor_id};
-		
-			  $.ajax({
+		 
+		 
+		 if (depositor_id == ""){
+		 	
+		 	$.ajax({
+				type: "POST",
+				url: "viewTransaction.php",
+				data: obj,
+				success: function(data){
+					
+					$("#transactions_table").html(data);		
+				},
+				error: function(data){
+						
+				}
+			});
+		 	
+		 }else{
+		 	
+		 
+		 	$.ajax({
 				type:"POST",
 				url: "search.php",
 				data: obj,
 				 success: function(data){
-				 $("#transaction_tables").html(data);
+				 $("#transactions_table").html(data);
 					//alert(data);
 						                         
 				},
@@ -207,16 +226,20 @@ $("#add_button_records").click(function(){
 				// alert(data);
 				 }
 								 
-				});	
+			});	
+		 
+		 
+		 
+		 
+		 }
+		 
+		 	
+		
+			  
                     }); 
-				$("#search").click(function(){
-				 $("#search").val("");
-	  }); 
+				
 
 });  
-	
-
-
 	
 
 
