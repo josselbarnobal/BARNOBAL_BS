@@ -320,23 +320,25 @@ function viewTransaction(){
 function search($depositor_id){
 	 		 $this->openConn();
                               
-                        $stmt =$this->dbh->prepare("SELECT depositorname, deposits, date_of_deposits, 
-			withdrawals, date_of_withdrawals, balance 
-			FROM records as r , depositor as d 
-			WHERE d.depositor_id = r.depositor_id;"); 	
+                        $stmt =$this->dbh->prepare("SELECT * FROM records WHERE depositor_id = ?"); 	
 			
 			$stmt->bindParam(1, $depositor_id);
 		        $stmt->execute();
-			$row = $stmt->fetch();
-                                               
-                                		
-                                
-			if($row=='' || $row==null ){
-				echo "<tr>";	
-                		echo "<td colspan='10'>nO lIST FouNd</td>";
-			       	echo "</tr>";	
-						
-					}else{
+		        		
+		        		echo "<tr>
+		        			<td>Depositor Id</td>
+						<td>Deposits</td>
+						<td>Date of Deposits</td>
+						<td>Withdrawals</td>
+						<td>Date of Withdrawals</td>
+						<td>Total Balance</td>
+		        		     </tr>";
+		        		
+		        		
+		        
+			while($row = $stmt->fetch()){
+					
+					
 						echo "<tr>";
 						echo "<td>".$row[1]."</td>";
 						echo "<td>".$row[2]."</td>";
@@ -344,8 +346,9 @@ function search($depositor_id){
 						echo "<td>".$row[4]."</td>";
 						echo "<td>".$row[5]."</td>";
 						echo "<td>".$row[6]."</td>";
-						echo"</tr>";
-					}
+						echo "</tr>";
+					
+				}
 		                 
                             $this->closeConn();
 
