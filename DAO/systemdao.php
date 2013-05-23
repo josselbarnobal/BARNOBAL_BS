@@ -320,6 +320,7 @@ function viewTransaction(){
 function search($depositor_id){
 	 		 $this->openConn();
                               
+<<<<<<< HEAD
                         $stmt =$this->dbh->prepare("SELECT depositorname, deposits, date_of_deposits, 
 			withdrawals, date_of_withdrawals, balance 
 			FROM records as r , depositor as d 
@@ -337,6 +338,27 @@ function search($depositor_id){
 			       	echo "</tr>";	
 						
 					}else{
+=======
+                        $stmt =$this->dbh->prepare("SELECT * FROM records WHERE depositor_id = ?"); 	
+			
+			$stmt->bindParam(1, $depositor_id);
+		        $stmt->execute();
+		        		
+		        		echo "<tr>
+		        			<td>Depositor Id</td>
+						<td>Deposits</td>
+						<td>Date of Deposits</td>
+						<td>Withdrawals</td>
+						<td>Date of Withdrawals</td>
+						<td>Total Balance</td>
+		        		     </tr>";
+		        		
+		        		
+		        
+			while($row = $stmt->fetch()){
+					
+					
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 						echo "<tr>";
 						echo "<td>".$row[1]."</td>";
 						echo "<td>".$row[2]."</td>";
@@ -344,8 +366,14 @@ function search($depositor_id){
 						echo "<td>".$row[4]."</td>";
 						echo "<td>".$row[5]."</td>";
 						echo "<td>".$row[6]."</td>";
+<<<<<<< HEAD
 						echo"</tr>";
 					}
+=======
+						echo "</tr>";
+					
+				}
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 		                 
                             $this->closeConn();
 

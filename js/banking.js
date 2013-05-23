@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 $(function(){
 
 	$("#date_of_deposit").datepicker();
@@ -190,16 +193,48 @@ $("#add_button_records").click(function(){
 		}
 	});
 });				
+<<<<<<< HEAD
 	$("#search").keyup(function(){ 
 		 var depositor_id = $("#search").val();
 		 var obj = {'depositor_id':depositor_id};
 		
 			  $.ajax({
+=======
+	$("#searchtransac").keyup(function(){ 
+	
+		 var depositor_id = $("#searchtransac").val();
+		 var obj = {'depositor_id':depositor_id};
+		 
+		 
+		 if (depositor_id == ""){
+		 	
+		 	$.ajax({
+				type: "POST",
+				url: "viewTransaction.php",
+				data: obj,
+				success: function(data){
+					
+					$("#transactions_table").html(data);		
+				},
+				error: function(data){
+						
+				}
+			});
+		 	
+		 }else{
+		 	
+		 
+		 	$.ajax({
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 				type:"POST",
 				url: "search.php",
 				data: obj,
 				 success: function(data){
+<<<<<<< HEAD
 				 $("#transaction_tables").html(data);
+=======
+				 $("#transactions_table").html(data);
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 					//alert(data);
 						                         
 				},
@@ -207,19 +242,37 @@ $("#add_button_records").click(function(){
 				// alert(data);
 				 }
 								 
+<<<<<<< HEAD
 				});	
                     }); 
 				$("#search").click(function(){
 				 $("#search").val("");
 	  }); 
+=======
+			});	
+		 
+		 
+		 
+		 
+		 }
+		 
+		 	
+		
+			  
+                    }); 
+				
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 
 });  
 	
 
 
+<<<<<<< HEAD
 	
 
 
+=======
+>>>>>>> 8fd612232e4f9f9a0dfc1c76b4aa92262fb9c5d5
 //Depositor
 
 
